@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <title>Contatos | SwiftStore</title>
+</head>
+<body>
+
+    <header>
+    <h1>
+        <a href="index.html" style="text-decoration: none;">
+            <span class="swift-azul">Sw<span class="seta-azul">↑</span>ft</span><span class="store-laranja">Store</span>
+        </a>
+    </h1>
+    
+    <div style="display: flex; align-items: center; gap: 20px;">
+        <button id="perfil" class="btn-icone" title="Meu Perfil">
+            <span class="material-symbols-outlined">account_circle</span>
+        </button>
+        <a href="carrinho.html" id="carrinho" class="bts-canto" title="Meu Carrinho">
+            <span class="material-symbols-outlined">shopping_cart</span>
+        </a>
+        <span style="font-weight: 500; font-size: 14px; color: #f8fafc; letter-spacing: 0.5px;">João Lucas S. P. Pinheiro</span>
+    </div>
+
+    <nav>
+        <ul style="display: flex; gap: 25px; list-style: none; margin: 0; padding: 0;">
+            <li><a href="index.html">Início</a></li>
+            <li><a href="produtos.html">Produtos</a></li>
+        </ul>
+    </nav>
+</header>
+
+    <main>
+        <p>Fale Conosco</p>
+        <form id="form-contato" action="actions/inserir_contato.php" method="post">
+                <fieldset>
+                    <legend>Dados Gerais</legend>
+                    
+                    <label for="nome">Nome:</label>
+                    <input type="text" required minlength="3" id="nome" name="nome">
+
+                    <label for="e-mail">E-mail:</label>
+                    <input type="email" id="e-mail" name="email" required>
+
+                    <label for="tel">Número:</label>
+                    <input type="tel" minlength="14" maxlength="15" id="tel" name="tel" placeholder="(00) 00000-0000">
+                </fieldset>
+                
+                <fieldset>
+                    <legend>Fale Conosco</legend>
+                    <label for="assunto">Assunto</label>
+                    <select id="assunto" name="assunto" required>
+                        <option value="Comentário">Comentário</option>
+                        <option value="Dúvida">Dúvida</option>
+                        <option value="Garantia">Garantia</option>
+                    </select>
+                    
+                    <label for="msg">Mensagem:</label>
+                    <textarea id="msg" name="msg" required></textarea>
+                </fieldset>
+
+                <button type="submit">Enviar</button>
+            </form>
+    </main>    
+    <footer class="footer-swiftstore">
+        <div class="footer-logo">
+            <span class="swift-azul">Sw<span class="seta-azul">↑</span>ft</span><span class="store-laranja">Store</span>
+        </div>
+        <p class="footer-texto">
+            Desenvolvido por <span class="destaque-nome">João Lucas</span>. Todos os direitos reservados.
+        </p>
+    </footer>
+    <script src="js/app.js"></script>
+</body>
+</html>

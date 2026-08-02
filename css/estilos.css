@@ -1,0 +1,718 @@
+/**
+ * ============================================================================
+ * SWIFTSTORE - ESTILOS GERAIS COESOS
+ * Projeto: Mini-ecommerce de Hardware (ADS)
+ * Visual: Cabeçalho Premium, Marcas Destacadas e Carrinho Estilo KaBuM!
+ * ============================================================================
+ */
+
+/* ==========================================
+   1. CONFIGURAÇÕES GERAIS E RESET
+   ========================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f6f9; /* Fundo ligeiramente acinzentado clássico de e-commerce */
+    color: #1e293b;
+    line-height: 1.6;
+}
+
+main {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+/* ==========================================
+   2. CABEÇALHO MESTRE (PREMIUM & STICKY)
+   ========================================== */
+header {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    flex-direction: row !important;
+    
+    background-color: #0b1121 !important; /* Azul escuro premium */
+    padding: 20px 40px !important;
+    
+    /* Efeitos de Destaque */
+    border-bottom: 4px solid #3b82f6 !important; /* Linha de sotaque azul */
+    box-shadow: 0 10px 25px rgba(160, 39, 39, 0.2) !important;
+    
+    /* Fixação no topo ao rolar a página */
+    position: sticky !important;
+    top: 0 !important;
+    z-index: 1000 !important;
+}
+
+header h1 {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.swift-azul { color: #3b82f6; }
+.seta-azul { color: #60a5fa; display: inline-block; }
+.store-laranja { color: #f97316; }
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+nav a {
+    color: #94a3b8;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 15px;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #ffffff;
+}
+
+.bts-canto, .btn-icone {
+    color: #ffffff;
+    background: none;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s;
+}
+
+.bts-canto:hover, .btn-icone:hover {
+    transform: scale(1.1);
+}
+
+/* ==========================================
+   3. VITRINE DE PRODUTOS (ALINHAMENTO SEGURO)
+   ========================================== */
+#vitrine-php, #vitrine-produtos {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 20px;
+}
+
+.card-deitado {
+    display: flex !important;
+    align-items: center !important;
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-left: 5px solid #3b82f6 !important; 
+    border-radius: 8px;
+    padding: 15px !important;
+    list-style: none;
+    
+    /* Altura cravada para simetria total */
+    height: 150px !important;      
+    min-height: 150px !important;  
+    max-height: 150px !important;  
+    overflow: hidden !important;   
+    
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card-deitado:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.img-deitada {
+    width: 110px !important;
+    height: 110px !important;
+    object-fit: contain !important; 
+    background-color: #fff;
+    border-radius: 6px;
+    margin-right: 20px;
+    flex-shrink: 0; 
+}
+
+.textos-deitados {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.textos-deitados li { list-style: none; }
+
+.textos-deitados strong {
+    font-size: 17px;
+    color: #0f172a;
+}
+
+/* Limitador de Linhas da Descrição */
+.textos-deitados li:nth-child(2) {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: #64748b;
+    font-size: 14px;
+    margin: 4px 0;
+}
+
+.valor-destaque {
+    color: #0f172a;
+    font-weight: 700;
+    font-size: 16px;
+    margin-top: 2px;
+}
+
+.acoes-deitadas {
+    margin-left: auto;
+    padding-left: 20px;
+    flex-shrink: 0;
+}
+
+.btn-carrinho {
+    background-color: #3b82f6;
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    width: 45px;
+    height: 45px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s;
+}
+
+.btn-carrinho:hover { background-color: #2563eb; }
+
+/* ==========================================
+   4. MARCAS RECOMENDADAS (MAIORES E COLORIDAS)
+   ========================================== */
+.lista-marcas {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 16px !important;
+    padding: 0 !important;
+    list-style: none !important;
+    margin-top: 15px !important;
+    align-items: center !important;
+}
+
+.lista-marcas li {
+    background-color: #ffffff !important;
+    padding: 10px 24px !important;
+    border-radius: 8px !important; 
+    border: 1px solid #e2e8f0 !important;
+    cursor: pointer !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    
+    height: 75px !important;      
+    min-width: 140px !important;  
+    
+    transition: all 0.3s ease !important;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+}
+
+.lista-marcas li img {
+    max-height: 50px !important;  
+    max-width: 110px !important;  
+    object-fit: contain !important;
+    transition: all 0.3s ease !important;
+}
+
+.lista-marcas li:hover {
+    border-color: #3b82f6 !important; 
+    transform: translateY(-4px) !important;
+    box-shadow: 0 10px 15px -3px rgba(59, 130, 246, 0.1) !important;
+}
+
+/* ==========================================
+   5. LAYOUT DO CARRINHO (ESTILO KABUM!)
+   ========================================== */
+.carrinho-wrapper {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    margin-top: 20px;
+}
+
+.carrinho-principal { 
+    flex: 1; 
+}
+
+.carrinho-lateral { 
+    width: 340px; 
+    display: flex; 
+    flex-direction: column; 
+    gap: 20px; 
+}
+
+.box-kabum {
+    background: #ffffff;
+    border-radius: 4px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    padding: 20px;
+}
+
+.banner-kbum {
+    background-color: #e5f0f9;
+    color: #0060b1;
+    padding: 15px 20px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.btn-k-laranja {
+    background-color: #ff6500;
+    color: #ffffff;
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 800;
+    cursor: pointer;
+    margin-bottom: 10px;
+    text-align: center;
+    transition: background 0.2s;
+}
+.btn-k-laranja:hover { background-color: #e55b00; }
+
+.btn-k-branco {
+    background-color: #ffffff;
+    color: #ff6500;
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ff6500;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 800;
+    cursor: pointer;
+    text-align: center;
+    transition: background 0.2s;
+}
+.btn-k-branco:hover { background-color: #fff5f0; }
+
+.item-kabum {
+    display: flex;
+    align-items: center;
+    padding: 20px 0;
+    border-bottom: 1px solid #e5e5e5;
+}
+.item-kabum:last-child { border-bottom: none; }
+
+.item-kabum img { 
+    width: 90px; 
+    height: 90px; 
+    object-fit: contain; 
+    margin-right: 20px; 
+}
+
+.item-kabum-info { flex: 1; }
+.item-kabum-info h4 { font-size: 14px; color: #42464d; margin-bottom: 5px; margin-top: 5px; }
+
+.item-kabum-preco { text-align: right; min-width: 160px; }
+.item-kabum-preco strong { color: #ff6500; font-size: 20px; font-weight: 800; }
+
+/* ==========================================
+   6. FORMULÁRIOS E PAINEL ADMINISTRATIVO
+   ========================================== */
+h2 {
+    font-size: 22px;
+    border-bottom: 2px solid #e2e8f0;
+    padding-bottom: 8px;
+    margin-bottom: 20px;
+    color: #0f172a;
+}
+
+fieldset {
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    padding: 20px;
+    background-color: #f8fafc;
+}
+
+input[type="text"], input[type="email"], select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    background-color: #fff;
+    font-size: 14px;
+    outline: none;
+}
+
+input:focus, select:focus { border-color: #3b82f6; }
+
+button[type="submit"] {
+    margin-top: 15px;
+    background-color: #3b82f6;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.tabela-container { background: #fff; border-radius: 8px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); overflow: hidden; }
+.tabela-admin { width: 100%; border-collapse: collapse; text-align: left; }
+.tabela-admin thead { background-color: #3b82f6; color: #fff; }
+.tabela-admin th, .tabela-admin td { padding: 16px 20px; }
+.tabela-admin tbody tr:hover { background-color: #f8fafc; }
+
+/* ==========================================
+   7. RODAPÉ (FOOTER)
+   ========================================== */
+/* ==========================================
+   7. RODAPÉ (SWIFTSTORE)
+   ========================================== */
+.footer-swiftstore {
+    background-color: #0b1121; /* Azul escuro premium igual ao cabeçalho */
+    text-align: center;
+    padding: 40px 20px;
+    margin-top: 50px;
+    border-top: 4px solid #3b82f6; /* Linha de detalhe azul */
+}
+
+.footer-swiftstore .footer-logo {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.footer-swiftstore .footer-texto {
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 600;
+    margin: 0;
+}
+
+.footer-swiftstore .destaque-nome {
+    color: #3b82f6;
+    font-weight: 800;
+}
+.copyright-texto { color: #64748b; font-size: 13px; }
+
+/* Notificação Toast Flutuante */
+.toast-notificacao {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #10b981;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 4px;
+    font-weight: 600;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    transform: translateY(100px);
+    opacity: 0;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    z-index: 2000;
+}
+.toast-notificacao.mostrar { transform: translateY(0); opacity: 1; }
+
+/* ==========================================
+   8. PAINEL ADMINISTRATIVO E LOGIN
+   ========================================== */
+
+/* Fundo geral das páginas de admin */
+.fundo-admin {
+    background-color: #f1f5f9;
+    min-height: 100vh;
+}
+
+/* -----------------------------------
+   TELA DE LOGIN (Alinhamento central)
+   ----------------------------------- */
+.fundo-admin > main.box-kabum {
+    max-width: 400px;
+    margin: 15vh auto; /* Empurra para o centro da tela */
+    padding: 40px 30px;
+    text-align: center;
+}
+
+.fundo-admin > main.box-kabum form {
+    text-align: left;
+    margin-top: 20px;
+}
+
+.fundo-admin > main.box-kabum fieldset {
+    border: none;
+    padding: 0;
+    background: transparent;
+}
+
+.fundo-admin > main.box-kabum label {
+    font-size: 14px;
+    color: #42464d;
+    font-weight: 600;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.fundo-admin > main.box-kabum input {
+    margin-bottom: 20px;
+}
+
+.fundo-admin > main.box-kabum nav {
+    margin-top: 25px;
+}
+
+.fundo-admin > main.box-kabum nav a {
+    color: #3b82f6;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* Mensagem de Erro do Login */
+.mensagem-erro {
+    background-color: #f8d7da;
+    color: #721c24;
+    padding: 12px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    font-size: 14px;
+    border-left: 4px solid #dc3545;
+}
+
+/* -----------------------------------
+   DASHBOARD (Menu Central)
+   ----------------------------------- */
+.grid-dashboard {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+    margin-top: 30px;
+}
+
+.card-dash {
+    background: #ffffff;
+    border-radius: 8px;
+    padding: 30px 20px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    border: 1px solid #e2e8f0;
+    transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.card-dash:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px -5px rgba(59, 130, 246, 0.15);
+    border-color: #3b82f6;
+}
+
+.card-dash h3 {
+    margin: 0;
+    font-size: 18px;
+    color: #0f172a;
+}
+
+.card-dash p {
+    margin: 8px 0 0 0;
+    font-size: 14px;
+    color: #64748b;
+}
+
+/* Ícones do Dashboard com cores independentes */
+.icone-dash {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.icone-dash span { font-size: 36px; }
+
+/* Cores específicas para cada card (Laranja, Azul e Verde) */
+.card-dash:nth-child(1) .icone-dash { background: #fff7ed; color: #ff6500; }
+.card-dash:nth-child(2) .icone-dash { background: #e0e7ff; color: #3b82f6; }
+.card-dash:nth-child(3) .icone-dash { background: #ecfdf5; color: #10b981; }
+
+/* -----------------------------------
+   AJUSTES FINAIS DO LOGIN
+   ----------------------------------- */
+.login-header {
+    margin-bottom: 30px;
+}
+
+.login-header h1 {
+    font-size: 28px;
+    border: none;
+    padding-bottom: 0;
+    margin-bottom: 5px;
+}
+
+.login-header p {
+    color: #64748b;
+    font-size: 14px;
+}
+
+/* Força o botão de submit do login a respeitar o estilo KaBuM (vencendo a regra global) */
+button[type="submit"].btn-login {
+    background-color: #ff6500;
+    width: 100%;
+    padding: 15px;
+    font-size: 16px;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    border-radius: 4px;
+    margin-top: 25px;
+}
+
+button[type="submit"].btn-login:hover {
+    background-color: #e55b00;
+}
+
+/* Container do campo de senha */
+.wrapper-senha {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+/* Ajusta o espaçamento interno do input para o texto não ficar embaixo do ícone */
+.wrapper-senha input {
+    padding-right: 45px !important;
+    margin-bottom: 0 !important; /* Remove a margem padrão para não desalinharem */
+}
+
+/* Botão do Olhinho flutuando na direita */
+.btn-olho {
+    position: absolute;
+    right: 12px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #64748b;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    height: 100%;
+    transition: color 0.2s;
+}
+
+.btn-olho:hover {
+    color: #3b82f6; /* Muda para azul ao passar o mouse */
+}
+
+/* ==========================================
+   AVISO LEGAL / DISPONIBILIDADE
+   ========================================== */
+.aviso-legal {
+    max-width: 1200px;
+    margin: 40px auto 20px auto;
+    padding: 20px;
+    text-align: center;
+    border-top: 1px solid #e2e8f0; /* Linha sutil separando do conteúdo acima */
+}
+
+.aviso-legal p {
+    color: #64748b; /* Cinza discreto */
+    font-size: 12px;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* ==========================================
+   9. BARRA DE FILTRO (CATÁLOGO DE PRODUTOS)
+   ========================================== */
+.cabecalho-filtro {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #e2e8f0;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.cabecalho-filtro h2 {
+    border: none;
+    padding: 0;
+    margin: 0;
+    color: #0f172a;
+}
+
+.form-filtro {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 0;
+}
+
+.form-filtro label {
+    font-weight: 600;
+    color: #42464d;
+    font-size: 14px;
+}
+
+.select-filtro {
+    padding: 8px 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    outline: none;
+    font-size: 14px;
+    cursor: pointer;
+    background-color: #fff;
+    color: #0f172a;
+    transition: border-color 0.2s;
+}
+
+.select-filtro:focus {
+    border-color: #3b82f6;
+}
+
+.btn-buscar-filtro {
+    background-color: #3b82f6;
+    color: white;
+    border: none;
+    cursor: pointer;
+    width: auto;
+    padding: 0 15px;
+    height: 38px;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    transition: background-color 0.2s;
+}
+
+.btn-buscar-filtro:hover {
+    background-color: #2563eb;
+}
+
+.header-acoes { display: flex; align-items: center; gap: 20px; }
+.usuario-nome { font-weight: 500; font-size: 14px; color: #f8fafc; }
+.aviso-vazio { text-align: center; padding: 50px; background: #fff; border-radius: 8px; border: 1px solid #e2e8f0; }
+.aviso-vazio span { font-size: 48px; color: #cbd5e1; }

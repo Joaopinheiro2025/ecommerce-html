@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SwiftStore | Hardware e Acessórios</title>
+    <!-- Aqui está o seu CSS são e salvo! -->
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+<body class="center">
+    <header>
+        <h1>
+            <a href="index.html" style="text-decoration: none;">
+                <span class="swift-azul">Sw<span class="seta-azul">↑</span>ft</span><span class="store-laranja">Store</span>
+            </a>
+        </h1>
+        
+        <div style="display: flex; align-items: center; gap: 20px;">
+            <button id="perfil" class="btn-icone" title="Meu Perfil">
+                <span class="material-symbols-outlined">account_circle</span>
+            </button>
+            <a href="carrinho.html" id="carrinho" class="bts-canto" title="Meu Carrinho">
+                <span class="material-symbols-outlined">shopping_cart</span>
+            </a>
+            <span style="font-weight: 500; font-size: 14px; color: #f8fafc; letter-spacing: 0.5px;">João Lucas S. P. Pinheiro</span>
+        </div>
+
+        <nav>
+            <ul style="display: flex; gap: 25px; list-style: none; margin: 0; padding: 0;">
+                <li><a href="produtos.html">Produtos</a></li>
+                <li><a href="contato.html">Contatos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>     
+            <h2>As melhores peças para seu PC.</h2>
+            <p>De entusiastas para entusiastas de Hardware.</p>
+        </section>
+        <section>
+            <h2>Produtos em destaque</h2>
+                
+            <!-- PRODUTO 1 -->
+            <ul id="ryzen" class="card-deitado">
+                <img src="img/foto_Ryzen_5500.jpg" alt="Processador AMD Ryzen 5" class="img-deitada"> 
+                <div class="textos-deitados">
+                    <li><strong>5 5500 6 núcleos / 12 threads</strong></li>
+                    <li>Categoria: CPU</li>
+                    <li class="valor-destaque">Valor: R$ 500,00</li>
+                </div>
+                <div class="acoes-deitadas">
+                    <button class="btn-carrinho" title="Adicionar ao carrinho" onclick="adicionarAoCarrinho(101, 'Processador AMD Ryzen 5 5500', 'R$ 500,00', 'img/foto_Ryzen_5500.jpg')">
+                        <span class="material-symbols-outlined">shopping_cart</span>
+                    </button>
+                </div>
+            </ul>
+
+            <!-- PRODUTO 2 -->
+            <ul id="placa-de-video" class="card-deitado">
+                <img src="img/foto_RX_7600.jpg" alt="RX 7600" class="img-deitada">
+                <div class="textos-deitados">
+                    <li><strong>Placa de vídeo RX 7600 8GB - XFX QUIK 308</strong></li>
+                    <li>Categoria: GPU</li>
+                    <li class="valor-destaque">Valor: R$ 1350,00</li>
+                </div>
+                <div class="acoes-deitadas">
+                    <button class="btn-carrinho" title="Adicionar ao carrinho" onclick="adicionarAoCarrinho(102, 'Placa de vídeo RX 7600 8GB - XFX', 'R$ 1350,00', 'img/foto_RX_7600.jpg')">
+                        <span class="material-symbols-outlined">shopping_cart</span>
+                    </button>
+                </div>
+            </ul>
+
+            <!-- PRODUTO 3 -->
+            <ul id="ram" class="card-deitado">
+                <img src="img/foto_RAM_LOKI.jpg" alt="Memória RAM - Asgard Loki" class="img-deitada">
+                <div class="textos-deitados">
+                    <li><strong>Memória RAM 8GBx2 - Asgard Loki</strong></li>
+                    <li>Categoria: DIMM</li>
+                    <li class="valor-destaque">Valor: R$ 195,19</li>
+                </div>
+                <div class="acoes-deitadas">
+                    <button class="btn-carrinho" title="Adicionar ao carrinho" onclick="adicionarAoCarrinho(103, 'Memória RAM 8GBx2 - Asgard Loki', 'R$ 195,19', 'img/foto_RAM_LOKI.jpg')">
+                        <span class="material-symbols-outlined">shopping_cart</span>
+                    </button>
+                </div>
+            </ul>
+
+        </section>
+        
+        <section style="margin-top: 30px;">
+            <h3><span class="material-symbols-outlined" style="vertical-align: middle; color: #f97316;">thumb_up</span> Marcas recomendadas</h3>
+            
+            <ul class="lista-marcas">
+    <li title="Ver produtos AMD">
+        <a href="produtos.html?marca=AMD"><img src="img/logo_amd.png" alt="AMD"></a>
+    </li>
+    <li title="Ver produtos ASUS">
+        <a href="produtos.html?marca=ASUS"><img src="img/logo_asus.png" alt="ASUS"></a>
+    </li>
+    <li title="Ver produtos XFX">
+        <a href="produtos.html?marca=XFX"><img src="img/logo_xfx.png" alt="XFX"></a>
+    </li>
+    <li title="Ver produtos Redragon">
+        <a href="produtos.html?marca=Redragon"><img src="img/logo_redragon.png" alt="Redragon"></a>
+    </li>
+    <li title="Ver produtos LG">
+        <a href="produtos.html?marca=LG"><img src="img/logo_lg.png" alt="LG"></a>
+    </li>
+    <li title="Ver produtos Lexar">
+        <a href="produtos.html?marca=Lexar"><img src="img/logo_lexar.png" alt="Lexar"></a>
+    </li>
+    <li title="Ver produtos Asgard">
+        <a href="produtos.html?marca=Asgard"><img src="img/logo_asgard.png" alt="Asgard"></a>
+    </li>
+    <li title="Ver produtos MSI">
+        <a href="produtos.html?marca=MSI"><img src="img/logo_msi.png" alt="MSI"></a>
+    </li>
+    <li title="Ver produtos Husky">
+        <a href="produtos.html?marca=Husky"><img src="img/logo_husky.png" alt="Husky"></a>
+    </li>
+    <li title="Ver produtos Mchose">
+        <a href="produtos.html?marca=Mchose"><img src="img/logo_mchose.png" alt="Mchose"></a>
+    </li>
+</ul>
+        </section>
+    </main>
+    <footer class="footer-swiftstore">
+        <section class="aviso-legal">
+        <p>
+            Preços e condições de pagamento exclusivos para compras via internet. Ofertas válidas até o término dos nossos estoques. Vendas sujeitas à análise e confirmação de dados. Em caso de divergência de valores no site, o valor válido é o do carrinho de compras.
+        </p>
+    </section>
+        <div class="footer-logo">
+            <span class="swift-azul">Sw<span class="seta-azul">↑</span>ft</span><span class="store-laranja">Store</span>
+        </div>
+        <p class="footer-texto">
+            Desenvolvido por <span class="destaque-nome">João Lucas</span>. Todos os direitos reservados.
+        </p>
+    </footer>
+    <script src="js/app.js"></script>
+</body>
+</html>
