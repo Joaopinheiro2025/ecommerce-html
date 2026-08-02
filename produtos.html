@@ -39,10 +39,8 @@
     <main>
         <div class="cabecalho-filtro">
             <h2>Catálogo de Produtos</h2>
-            <!-- Atualizado para .html -->
             <form method="GET" action="produtos.html" class="form-filtro">
                 <label for="filtro-categoria">Filtrar:</label>
-                <!-- Removidas as tags PHP (short tags) -->
                 <select name="categoria" id="filtro-categoria" class="select-filtro">
                     <option value="Todos">Todas as Categorias</option>
                     <option value="Processador">Processador (CPU)</option>
@@ -50,7 +48,7 @@
                     <option value="Memória RAM">Memórias RAM</option>
                     <option value="SSD">Armazenamento (SSD)</option>
                     <option value="Fonte">Fontes</option>
-                     <option value="Placas de Vídeo">Placas de Vídeo (GPU)</option>
+                    <option value="Placas de Vídeo">Placas de Vídeo (GPU)</option>
                     <option value="Gabinete">Gabinetes</option>
                     <option value="Monitor">Monitores</option>
                     <option value="Mouse">Mouses</option>
@@ -63,70 +61,12 @@
             </form>
         </div>
 
-        <div id="vitrine-php">
-            
-            <!-- PRODUTO 1 -->
-            <ul class="card-deitado">
-                <!-- Substitua 'img/foto_Ryzen_5500.jpg' pelo nome correto da imagem na sua pasta -->
-                <img src="img/foto_Ryzen_5500.jpg" alt="Processador AMD Ryzen 5 5500" class="img-deitada">
-                <div class="textos-deitados">
-                    <li><strong>Processador AMD Ryzen 5 5500</strong></li>
-                    <li>Categoria: Processador | Marca: <strong>AMD</strong></li>
-                    <li class="valor-destaque">R$ 599,90</li>
-                </div>
-                <div class="acoes-deitadas">
-                    <button class="btn-carrinho" title="Adicionar ao carrinho" onclick="adicionarAoCarrinho(1, 'Processador AMD Ryzen 5 5500', 'R$ 599,90', 'img/foto_Ryzen_5500.jpg')">
-                        <span class="material-symbols-outlined">shopping_cart</span>
-                    </button>
-                </div>
-            </ul>
+    <!-- O PALCO DO JAVASCRIPT: Esta div precisa estar vazia! -->
+    <div id="vitrine-produtos-js">
+        <!-- É aqui que o JavaScript vai injetar todos os 16 produtos automaticamente ao carregar a página -->
+    </div>
 
-            <!-- PRODUTO 2 -->
-            <ul class="card-deitado">
-                <img src="img/foto_RX_7600.jpg" alt="Placa de Vídeo XFX AMD Radeon RX 7600" class="img-deitada">
-                <div class="textos-deitados">
-                    <li><strong>Placa de Vídeo XFX AMD Radeon RX 7600</strong></li>
-                    <li>Categoria: Placas de Vídeo | Marca: <strong>XFX</strong></li>
-                    <li class="valor-destaque">R$ 1.799,00</li>
-                </div>
-                <div class="acoes-deitadas">
-                    <button class="btn-carrinho" title="Adicionar ao carrinho" onclick="adicionarAoCarrinho(2, 'Placa de Vídeo XFX AMD Radeon RX 7600', 'R$ 1.799,00', 'img/foto_RX_7600.jpg')">
-                        <span class="material-symbols-outlined">shopping_cart</span>
-                    </button>
-                </div>
-            </ul>
-
-            <!-- PRODUTO 3 -->
-            <ul class="card-deitado">
-                <img src="img/foto_WIDELOAD_PRO.jpg" alt="Gabinete Redragon Wideload Pro" class="img-deitada">
-                <div class="textos-deitados">
-                    <li><strong>Gabinete Redragon Wideload Pro</strong></li>
-                    <li>Categoria: Gabinete | Marca: <strong>Redragon</strong></li>
-                    <li class="valor-destaque">R$ 389,00</li>
-                </div>
-                <div class="acoes-deitadas">
-                    <button class="btn-carrinho" title="Adicionar ao carrinho" onclick="adicionarAoCarrinho(3, 'Gabinete Redragon Wideload Pro', 'R$ 389,00', 'img/foto_WIDELOAD_PRO.jpg')">
-                        <span class="material-symbols-outlined">shopping_cart</span>
-                    </button>
-                </div>
-            </ul>
-
-            <!-- PRODUTO 4 -->
-            <ul class="card-deitado">
-                <img src="img/foto_HUSKY_NOMADIC.jpg" alt="Teclado Mecânico Husky Nomadic" class="img-deitada">
-                <div class="textos-deitados">
-                    <li><strong>Teclado Mecânico Husky Nomadic Wireless</strong></li>
-                    <li>Categoria: Teclado | Marca: <strong>Husky</strong></li>
-                    <li class="valor-destaque">R$ 259,90</li>
-                </div>
-                <div class="acoes-deitadas">
-                    <button class="btn-carrinho" title="Adicionar ao carrinho" onclick="adicionarAoCarrinho(4, 'Teclado Mecânico Husky Nomadic Wireless', 'R$ 259,90', 'img/foto_HUSKY_NOMADIC.jpg')">
-                        <span class="material-symbols-outlined">shopping_cart</span>
-                    </button>
-                </div>
-            </ul>
-
-        </div>
+</section>
     </main>
 
     <footer class="footer-swiftstore">
